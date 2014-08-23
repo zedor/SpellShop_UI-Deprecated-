@@ -56,7 +56,9 @@ A custom UI module for use by map makers, made by zed (alter ego of Selena Gomez
 ###### Contact
 
 zed` or zed`` on #dota2mods @ irc.gamesurge.net
+
 reddit.com/u/SelenaGomez_
+
 spellshopui@gmail.com
 
 ###### Donation
