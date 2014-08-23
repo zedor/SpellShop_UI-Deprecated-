@@ -23,7 +23,8 @@ A custom UI module for use by map makers, made by zed (alter ego of Selena Gomez
 * Check and edit the files in "scripts/spell_shop_ui/"
 * **Check and edit LUA files in "scripts/vscripts/spell_shop_ui.lua"**
   * I'm no Lua coder, so I called the SpellShopUI:InitGameMode(); from within addon_game_mode.lua
-  * **The spells don't work as it is! You have to precache stuff or do something else within LUA - I don't know, it's up to you.**
+  * **The spells don't work as it is (the casting)! You have to precache stuff or do something else within LUA - I don't know, it's up to you.**
+    * Check Legends of Dota by Ash47. I'm sorry, I can't help you with that
 * Put your custom icons (128 x 128) in "resource/flash3/images/spellicons/", PNG format
 
 ###### Events
