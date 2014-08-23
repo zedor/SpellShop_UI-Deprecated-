@@ -217,6 +217,8 @@
 					_curRes = args._res;
 				}
 				_showRes.text = _curRes.toString();
+				if( _shopState == 0 && _opened ) changeBuyDisplay(0);
+				if( _shopState == 1 && _opened ) changeSellDisplay(0);
 			}
 		}
 		
@@ -297,7 +299,7 @@
                 if(typeof(v) == "object") {
 					v._ID = leadingZero(v._ID);
 					_spells[v._ID] = new tmpTest;
-					trace('[loadSpellsKV] ' + leadingZero(v._ID) + ' ' + v._texture);
+					//trace('[loadSpellsKV] ' + leadingZero(v._ID) + ' ' + v._texture);
 					_spells[v._ID].setup_btn(v, this.gameAPI, this.globals, _size, _useRes, _useGold );
 					if( _spells[v._ID]._isOwned ) _owned++;
 					_nm++;
@@ -307,11 +309,11 @@
 		
 		public function sortSpellsKV( index:int, max:int ) {
 			for(var key in _spells) {
-				trace('[sortSpellsKV]' + key );
-				trace('_spells[key]._ID ' + _spells[key]._ID);
+				//trace('[sortSpellsKV]' + key );
+				//trace('_spells[key]._ID ' + _spells[key]._ID);
 				if( _spells[key]._ID == leadingZero(index) ) {
 					_arr_key.push(key);
-					trace('[sortSpellsKV]' + key );
+					//trace('[sortSpellsKV]' + key );
 					if( index+1 <= max ) sortSpellsKV( index+1, max );
 					break;
 				}
@@ -369,7 +371,7 @@
 				_texts[key].y = _parent_y + _parent_h;
 				_parent_y = _texts[key].y;
 				_parent_h = _texts[key].height;
-				trace('[setInfoTab] ' + textCont.x + ';;' + _texts[key].x);
+				//trace('[setInfoTab] ' + textCont.x + ';;' + _texts[key].x);
 			}
 		}
 		
@@ -499,6 +501,7 @@
 				if( _currentSellIndex <= _index && _counter < (_max_row*_max_column) ) {
 					if( key == "0000" ) {
 						if( this._spells[key].parent != this ) this.addChild(this._spells[key]);
+						this._spells[key].set_text( (this._spells[key]._cost * this._spells[key]._sellFactor) );
 						this._spells[key].x = this.anchor.x + ( ((_counter - _currentSellIndex) % _max_row ) * (_size+_dist) );
 						this._spells[key].y = this.anchor.y + ( Math.floor((_counter - _currentSellIndex) / _max_row) * (_size+_dist) );
 						if( _curRes > 0 ) this._spells[key].set_enabled(true, false); else { this._spells[key].set_enabled(false, false); this._spells[key].set_visibility(true, false, false); }
@@ -543,6 +546,7 @@
 					// handle adding / removing considering the set parameters (_isOwned, _removal)
 					if( key == "0000" ) {
 						if( this._spells[key].parent != this ) this.addChild(this._spells[key]);
+						this._spells[key].set_text(this._spells[key]._cost);
 						if( _curGold >= this._spells[key]._txtCost.text ) this._spells[key].set_enabled(true, false);
 							else { this._spells[key].set_enabled(false, false); this._spells[key].set_visibility(true, false, false); }
 						this._spells[key].x = this.anchor.x + ( ((_index - _currentBuyIndex) % _max_row ) * (_size+_dist) );
@@ -610,7 +614,7 @@
 			for (var i:int = 1; i < _spells[_ID]._curLvl+1; i++) {
     			if( (i-1) % _spells[_ID]._pntIncLvl == 0 && i>1 ) {
 					cur += _spells[_ID]._pntIncrement;
-					trace(cur);
+					//trace(cur);
 				}
 				total += cur;
 			}
@@ -627,9 +631,9 @@
 			this.scaleY = yScale;//this._baseH*yScale;
 			this.x = 0;
 			this.y = anch.y - (this._baseH*yScale);
-			trace('[POSITIONING] ' + anch.y);
-			trace('[POSITIONING] ' + this.y);
-			trace('[POSITIONING] ' + (this._baseH*yScale));
+			//trace('[POSITIONING] ' + anch.y);
+			//trace('[POSITIONING] ' + this.y);
+			//trace('[POSITIONING] ' + (this._baseH*yScale));
 		}
 	}
 	

@@ -30,21 +30,7 @@
     	public function setup(api:Object, globals:Object) {
         	this.gameAPI = api;
     		this.globals = globals;
-	
-    		//this is our listener for the event, onResUpdate() is the handler
-		    this.gameAPI.SubscribeToGameEvent("cgm_player_res_changed", this.onResUpdate);
     	}
-		
-		public function onResUpdate(args:Object) : void {
-    		/*//get the ID of the player this UI belongs to, here we use a scaleform function from globals
-    		var pID:int = this.globals.Players.GetLocalPlayer();
-    
-    		//check of the player in the event is the owner of this UI. Note that args are the parameters of the event
-    		if (args.player_ID == pID) {
-        		this.shpOver.txtRes.text=args.res_amount;
-			}
-			trace("onResUpdate " + args.res_amount);*/
-		}
 		
 		public function screenResize(stageW:int, stageH:int, xScale:Number, yScale:Number){
     		//we set the position of this movieclip to the center of the stage

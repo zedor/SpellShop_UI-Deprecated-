@@ -154,7 +154,6 @@ function SpellShopUI:PlayerSellSkillpoint( player, _cost)
 	success = true
 	hero:ModifyGold(tonumber(_cost), false, DOTA_ModifyGold_Unspecified)
 	_res = _res - 1
-	print( _res )
 	
 	-- [IMPORTANT] Send the event when you're finished so the Flash UI properly registers it
 	FireGameEvent('spell_shop_ui_update_res', { player_ID = pID, _res = _res } )

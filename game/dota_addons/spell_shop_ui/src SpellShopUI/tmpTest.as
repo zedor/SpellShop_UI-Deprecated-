@@ -108,7 +108,7 @@
 				//change visibility of the ability button
 				set_visibility(false, true, false);
 			}
-			trace('[mouse_over] ' + this._nameLUA);
+			//trace('[mouse_over] ' + this._nameLUA);
 			//set the object
 			var ob:Object = e.target;
             // set the point because fuck

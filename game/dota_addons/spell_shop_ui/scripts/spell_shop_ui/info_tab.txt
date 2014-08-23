@@ -35,7 +35,7 @@
 		"_bg"		"false"
 		"_bgColor"	"0x000000"
 		"_align"	"left"
-		"_text"		"This is a UI module for Dota2 mad/mop makers. If you intend to use it, please check the relevant readme files. Source is available at <insert github here>."
+		"_text"		"This is a UI module for Dota2 mad/mop makers. If you intend to use it, please check the relevant readme files. Source is available at github.com/zedor/SpellShop_UI."
 	}
 	
 	"text3"
@@ -83,7 +83,7 @@
 		"_bg"		"true"
 		"_bgColor"	"0x000000"
 		"_align"	"left"
-		"_text"		"zed` or zed``\n on #dota2mods @ irc.gamesurge.net\nhttp://www.reddit.com/user/SelenaGomez_\nSource: <insert github here>"
+		"_text"		"zed` or zed``\non #dota2mods @ irc.gamesurge.net\nhttp://www.reddit.com/user/SelenaGomez_\nSource: github.com/zedor/SpellShop_UI"
 	}
 	
 	"text7"
