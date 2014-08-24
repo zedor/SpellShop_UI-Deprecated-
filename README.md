@@ -30,10 +30,10 @@ Youtube links:
 * Put the files in their correct folders
 * It's not necessary to edit the .swf, but feel free to do so (source is included in "src SpellShopUI" folder)
 * Check and edit the files in "scripts/spell_shop_ui/"
-* **Check and edit LUA files in "scripts/vscripts/spell_shop_ui.lua"**
+* **Check and edit Lua files in "scripts/vscripts/spell_shop_ui.lua"**
   * I'm no Lua coder, so I called the SpellShopUI:InitGameMode(); from within addon_game_mode.lua
-  * **The spells don't work as it is (the casting)! You have to precache stuff or do something else within LUA - I don't know, it's up to you.**
-    * Check Legends of Dota by Ash47. I'm sorry, I can't help you with that
+  * **The spells don't work as it is (the casting)! You have to precache stuff or do something else within Lua - I don't know, it's up to you.**
+    * Check Legends of Dota by Ash47 or something. I'm sorry, I can't help you with that
 * Put your custom icons (128 x 128) in "resource/flash3/images/spellicons/", PNG format
 
 ###### Events
