@@ -4,7 +4,7 @@
 ##### About
 
 A custom UI module for use by map makers
-Version 1.0
+Version 1.01
 
 ##### Preview
 
@@ -61,6 +61,13 @@ Youtube links:
 		"_limit"		"short"
 	}
 // "_limit" is the number of different spells/abilities a player can own
+```
+
+###### Changes
+* V1.01
+```
+added spells_default.txt
+  - set default values for spells, other than _ID. then you dont have to write everything in the spells.txt, just the values that you dont want to pull from the spells_default.txt
 ```
 
 ###### Contact
