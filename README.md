@@ -3,7 +3,8 @@
 
 ##### About
 
-A custom UI module for use by map makers, made by zed (alter ego of Selena Gomez)
+A custom UI module for use by map makers
+Version 1.0
 
 ##### Preview
 
@@ -64,6 +65,7 @@ Youtube links:
 
 ###### Contact
 
+* Please contact me with any requests or bugs. Constructive and uncostructive criticism is welcomed aswell.
 ```
 zed` or zed`` on #dota2mods @ irc.gamesurge.net
 reddit.com/u/SelenaGomez_
