@@ -19,6 +19,9 @@
 		"_pntIncLvl"	"0" // do not change this
 	}
 	
+	// everything other than _ID can be defaulted in the spells_default.txt
+	// if you dont set _texture, it is defaulted to _name
+
 	"0001" // keep this the same as the _ID, keep it unique and in "XXXX" format. it's also the order in which your spells will show up
 	{
 		"_ID"			"0001" // see comment above

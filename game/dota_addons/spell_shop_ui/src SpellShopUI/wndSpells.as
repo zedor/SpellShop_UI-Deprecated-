@@ -27,6 +27,7 @@
 		var gameAPI:Object;
 		var globals:Object;
 		
+		var _defaults:Object = new Object; // holding default spell info;
 		var _spells:Object = new Object; //its holding our spells
 		var _arr_key:Array = new Array; //its holding our keys for spells in a particular order "0000", "0001", "0002" etc
 		var _info_key:Array = new Array; //its holding our keys for _texts, see above
@@ -189,6 +190,10 @@
 			setInfoTab();
 			textCont.visible = false;
 			
+			// load the spell defaults
+			var _defaultSpellKV = Globals.instance.GameInterface.LoadKVFile('scripts/spell_shop_ui/spells_default.txt');
+			loadDefaultsKV( _defaultSpellKV );
+			
 			//load the spells from the KV
 			var _spellsKV = Globals.instance.GameInterface.LoadKVFile('scripts/spell_shop_ui/spells.txt');
 			loadSpellsKV( _spellsKV );
@@ -208,6 +213,25 @@
 					_showRes = showRes;
 			}
 			
+		}
+		
+		public function loadDefaultsKV( args:Object ) {
+			_defaults._nameLUA = args._name;
+			_defaults._texture = args._texture;
+			_defaults._cost = args._cost;
+			_defaults._sellFactor = args._sellFactor;
+			_defaults._upgFactor = args._upgFactor;
+			_defaults._curLvl = args._curLvl;
+			_defaults._maxLvl = args._maxLvl;
+			_defaults._pntCost = args._pntCost;
+			_defaults._pntSellFac = args._pntSellFac;
+			_defaults._pntIncrement = args._pntIncrement;
+			_defaults._pntIncLvl = args._pntIncLvl;
+				
+			if( args._isSellable == "true" ) _defaults._isSellable = true; else _defaults._isSellable = false;
+			if( args._isOwned == "true" ) _defaults._isOwned = true; else _defaults._isOwned = false;
+			if( args._isUpg == "true" ) _defaults._isUpg = true; else _defaults._isUpg = false;
+
 		}
 		
 		public function updateRes( args:Object ) {
@@ -297,6 +321,22 @@
                 var v = args[key];
 				
                 if(typeof(v) == "object") {
+					if( v._name == null ) v._name = _defaults._nameLUA;
+					if( v._texture == null ) v._texture = v._name;
+					if( v._cost == null ) v._cost = _defaults._cost;
+					if( v._sellFactor == null ) v._sellFactor = _defaults._sellFactor;
+					if( v._upgFactor == null ) v._upgFactor = _defaults._upgFactor;
+					if( v._curLvl == null ) v._curLvl = _defaults._curLvl;
+					if( v._maxLvl == null ) v._maxLvl = _defaults._maxLvl;
+					if( v._pntCost == null ) v._pntCost = _defaults._pntCost;
+					if( v._pntSellFac == null ) v._pntSellFac = _defaults._pntSellFac;
+					if( v._pntIncrement == null ) v._pntIncrement = _defaults._pntIncrement;
+					if( v._pntIncLvl == null ) v._pntIncLvl = _defaults._pntIncLvl;
+					if( v._isOwned == null ) if( !_defaults._isOwned ) v._isOwned = "false"; else v._isOwned = "true";
+					if( v._isSellable == null ) if( !_defaults._isSellable ) v._isSellable = "false"; else v._isSellable = "true";
+					if( v._isUpg == null ) if( !_defaults._isUpg  ) v._isUpg = "false"; else v._isUpg = "true";
+					
+					
 					v._ID = leadingZero(v._ID);
 					_spells[v._ID] = new tmpTest;
 					//trace('[loadSpellsKV] ' + leadingZero(v._ID) + ' ' + v._texture);
