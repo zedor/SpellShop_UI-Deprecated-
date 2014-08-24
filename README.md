@@ -5,6 +5,14 @@
 
 A custom UI module for use by map makers, made by zed (alter ego of Selena Gomez)
 
+##### Preview
+
+Puu.sh links:
+[Gold only](http://puu.sh/b4Owf/ffdf09b850.webm) | [Point only](http://puu.sh/b4Oyt/2e6ec6afd6.webm) | [Gold and point](http://puu.sh/b4OB0/f3a605cbdc.webm) | [Info tab](http://puu.sh/b2yJ1/950b2d3373.webm)
+
+Youtube links:
+[Gold only](https://www.youtube.com/watch?v=tld-9yvX1Dw) | [Point only](https://www.youtube.com/watch?v=FaF-DQgH-HQ&feature=youtu.be) | [Gold and point](https://www.youtube.com/watch?v=PxLzGXmJwzM&feature=youtu.be) | [Whole screen](https://www.youtube.com/watch?v=pRbrS7qmtoQ)
+
 ##### Features
 
 * Buying spells
