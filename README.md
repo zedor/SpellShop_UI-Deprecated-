@@ -4,7 +4,7 @@
 ##### About
 
 A custom UI module for use by map makers
-Version 1.01
+Version 1.02
 
 ##### Preview
 
@@ -63,7 +63,11 @@ Youtube links:
 // "_limit" is the number of different spells/abilities a player can own
 ```
 
-###### Changes
+###### Changelog
+* V1.02
+```
+fixed the problem with sorting where i dun goofed it like a retard, loading more than 100 spells works correctly now
+```
 * V1.01
 ```
 added spells_default.txt
