@@ -197,7 +197,8 @@
 			//load the spells from the KV
 			var _spellsKV = Globals.instance.GameInterface.LoadKVFile('scripts/spell_shop_ui/spells.txt');
 			loadSpellsKV( _spellsKV );
-			if( _useRes ) sortSpellsKV( 0, _nm ); else sortSpellsKV( 1, _nm );
+			//if( _useRes ) sortSpellsKV( 0, _nm ); else sortSpellsKV( 1, _nm );
+			_arr_key.sort();
 			
 			resetState();
 			
@@ -338,6 +339,7 @@
 					
 					
 					v._ID = leadingZero(v._ID);
+					_arr_key.push(v._ID);
 					_spells[v._ID] = new tmpTest;
 					//trace('[loadSpellsKV] ' + leadingZero(v._ID) + ' ' + v._texture);
 					_spells[v._ID].setup_btn(v, this.gameAPI, this.globals, _size, _useRes, _useGold );
@@ -346,7 +348,7 @@
                 }
             }
 		}
-		
+		/*
 		public function sortSpellsKV( index:int, max:int ) {
 			for(var key in _spells) {
 				//trace('[sortSpellsKV]' + key );
@@ -358,7 +360,7 @@
 					break;
 				}
 			}
-		}
+		}*/
 		
 		function leadingZero(num : Number) : String {
    			if(num < 10) {
