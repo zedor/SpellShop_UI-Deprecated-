@@ -71,7 +71,7 @@
 		"player_ID"		"short"
 	}
 	
-	"spell_shop_ui_toggle_state"
+	"spell_shop_ui_shop_toggle"
 	{
 		"player_ID"		"short"
 	}
