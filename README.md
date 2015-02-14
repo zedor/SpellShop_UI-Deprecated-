@@ -85,7 +85,4 @@ spellshopui@gmail.com
 
 ###### Donation
 
-* If you want to donate, I would be more than grateful! 
-```
-bitcoin: 1M7E87NXXEpVf3vi4FfGqBSp2e5SbgV1jG
-```
+* If you want to donate, I would be more than grateful! Please contact me as I live in a poor country w/o paypal donations :(
